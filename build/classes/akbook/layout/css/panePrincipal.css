@@ -1,0 +1,20 @@
+/* 
+    Created on : 10-jun-2018, 15:14:36
+    Author     : Perla
+*/
+.tab-pane .tab-header-area .tab-header-background{
+    -fx-background-color:#091223;
+    -fx-background-image: url("../frames/logo.png");
+    -fx-background-size: 60px 30px;
+    -fx-background-position:100% 0%;
+    -fx-background-repeat: no-repeat;
+}
+.tab-pane .tab {-fx-background-color: #3E434A;}
+.tab-pane .tab:selected {-fx-background-color: #3D5667;}
+.tab .tab-label {-fx-text-fill: #ffffff;}
+#tab-close {-fx-background-color: rgba(0,0,0,0);}
+.split-pane-divider {
+    -fx-padding: 0 0 0 0;
+    -fx-background-color: rgba(0,0,0,0);
+}
+

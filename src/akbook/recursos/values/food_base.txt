@@ -1,0 +1,140 @@
+401
+DMG +63 durante 30 minutos# 
+402
+CRIT +33 por 30 minutos# 
+
+403
+SPD +33 por 30 minutos# 
+
+404
+DMG +210 por 30 minutos# 
+405
+CRIT +108 por 30 minutos# 
+406
+VEL +108 por 30 minutos# 
+407
+Max HP +419 por 30 minutos# 
+408
+DEF +108 por 30 minutos# 
+409
+EVA +108 por 30 minutos# 
+410
+DMG +453 por 30 minutos# 
+411
+CRIT +233 por 30 minutos# 
+412
+VEL +233 por 30 minutos# 
+413
+Max HP +907 por 30 minutos# 
+414
+DEF +233 por 30 minutos# 
+415
+EVA +233 por 30 minutos# 
+416
+DMG +795 durante 30 minutos# 
+417
+CRIT +408 por 30 minutos# 
+418
+VEL +408 por 30 minutos# 
+419
+Max HP +1408 por 30 minutos# 
+420
+DEF +408 por 30 minutos# 
+421
+EVA +408 por 30 minutos# 
+422
+VEL +514 por 30 minutos# 
+423
+CRIT +514 por 30 minutos# 
+424
+EVA +514 por 30 minutos# 
+425
+DMG +1002 por 30 minutos# 
+426
+DEF +514 por 30 minutos# 
+427
+Max HP +1670 por 30 minutos# 
+428
+DMG +1233 por 30 minutos# 
+429
+Max HP +1940 por 30 minutos# 
+430
+CRIT +633 por 30 minutos# 
+431
+DEF +633 por 30 minutos# 
+432
+EVA +633 por 30 minutos# 
+433
+VEL +633 por 30 minutos# 
+434
+VEL +908 por 30 minutos# 
+435
+CRIT +908 por 30 minutos# 
+436
+DMG +1770 por 30 minutos# 
+437
+EVA +908 por 30 minutos# 
+438
+DEF +908 por 30 minutos# 
+439
+Max HP +2503 por 30 minutos# 
+440
+DMG +1233 y SPD +616 durante 30 minutos# 
+441
+DMG +2403 y SPD +616 durante 30 minutos# 
+442
+VEL +1233 y DMG +1201 durante 30 minutos# 
+443
+Max HP +3365 y DEF +801 durante 30 min# 
+444
+DEF +1602 y EVA +616 durante 30 minutos# 
+445
+EVA +1233 y HP max +1682 durante 30 minutos# 
+446
+DEF +1602 y HP max +1682 durante 30 minutos# 
+447
+EVA +1233 y DEF +801 durante 30 minutos# 
+448
+CRIT +1233 y DMG +1201 durante 30 minutos# 
+449
+DMG +2403 y DMG +616 durante 30 minutos# 
+450
+VEL +1233 y CRIT +616 durante 30 minutos# 
+451
+Max HP +3365 y EVA +616 durante 30 minutos# 
+452
+EVA +1414 y DEF +707 durante 30 min# 
+453
+DEF +1838 y HP +1930 durante 30 min# 
+454
+DMG +1378 y CRIT +1414 durante 30 min# 
+455
+VEL +707 y DMG +2757 durante 30 min# 
+456
+VEL +1414 y CRIT +707 durante 30 min# 
+457
+HP +3860 y DEF +707 durante 30 min# 
+458
+HP +1930 y EVA +1414 durante 30 min# 
+459
+VEL +1414 y DMG +1378 durante 30 min# 
+460
+DEF +1838 y EVA +707 durante 30 min# 
+461
+DMG +2757 y CRIT +707 durante 30 min# 
+462
+CRIT +1414 y SPD +707 durante 30 min# 
+463
+HP +3860 y EVA +707 durante 30 min# 
+464
+VEL +1608 y CRIT +804 durante 30 min# 
+465
+DMG +3135 y SPD +804 durante 30 min# 
+466
+EVA +1608 y Max HP +2195 durante 30 min# 
+467
+CRIT +1608 y DMG +1568 durante 30 min# 
+468
+DEF +2090 y EVA +804 durante 30 min# 
+469
+Max HP +4389 y DEF +1045 durante 30 min# 

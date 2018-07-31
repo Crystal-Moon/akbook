@@ -1,0 +1,138 @@
+501
+DMG+82 #DMG CRIT +15%# 
+502
+CRIT+43 #PRE+6%# 
+503
+VEL+43 #ATQ +10%# 
+504
+DMG +273 #Tasa CRIT +6%# 
+505
+VEL +140 #VEL de movimiento +5%# 
+506
+PS +545 #DMG CRIT recibido -15%# 
+507
+CRIT +140 #10% de posibilidades de ATQ triple# 
+508
+CRIT +303 #+8% de DMG a objetivos con atributo fuego# 
+509
+VEL +303 #VEL de movimiento +5%# 
+510
+DMG +589 #Tasa CRIT +3%# 
+511
+DMG +1034 #+8% DMG a objetivos con atributo luz# 
+512
+VEL +530 #10% de posibilidades de ATQ triple# 
+513
+CRIT +530 #DMG CRIT +20%# 
+514
+PS +1830 #Curacion-P +5%# 
+515
+DEF +668 #DMG recibido -5%# 
+516
+CRIT +668 #+8% de DMG a objetivos con atributo hielo# 
+517
+DMG +1303 #Tasa CRIT +4%# 
+518
+VEL +668 #VEL de movimiento +6%# 
+519
+CRIT +823 #PRE +8%# 
+520
+DMG +1603 #10% de posibilidades de ATQ triple# 
+521
+VEL +823 #10% de posibilidades de ATQ triple# 
+522
+VEL +1180 #ATQ +10%# 
+523
+DMG +2301 #8% de DMG a objetivos con atributo tormenta# 
+524
+CRIT +1180 #DMG CRIT +30%# 
+525
+CRIT +1602#VEL +986 #DMG CRIT +30%
+526
+DEF +2083#EVA +986 #DMG recibido -5%
+527
+DMG +3124#VEL +986 #tasa CRIT +5%
+528
+CRIT +1602#DMG +1923 #PRE +8%
+529
+VEL +1602#CRIT +986 #10% de posibilidades de ATQ doble
+530
+DMG +3124#CRIT +986 #10% de posibilidades de ATQ triple
+531
+CRIT +1131#VEL +1838 #PRE +8%
+532
+DMG +3584#VEL +1131 #10% de posibilidades de ATQ triple
+533
+DMG +2205#CRIT +1838 #10% de posibilidades de ATQ triple
+534
+CRIT +1838#VEL +1131 #DMG critico +30%
+535
+DMG +3584#CRIT +1131 #radio de critico +4%
+536
+DEF +2389#EVA +1131 #DMG recibido -5% 
+537
+DEF +2717#EVA +1286 #PS +10%
+538
+DMG +4076#VEL +1286 #CRIT +4%
+539
+VEL +2090#CRIT +1286 #10% de posibilidades de ATQ doble
+540
+CRIT +2090#DMG +2508 #DMG CRIT +30%
+541
+EVA +140 #+10% de posibilidades de conjuración triple# 
+542
+DEF +140 #DMG recibido -4%# 
+543
+EVA +303 #EXP por muerte de monstruos +5%# 
+544
+DEF +303 #maximo de PS +6%# 
+545
+PS +1179 #Curacion-P +5%# 
+546
+DEF +530 #maximo de PS +8%# 
+547
+EVA +530 #10% de posibilidades de conjuración triple# 
+548
+EVA +668 #ATQ contra jugadores +10%# 
+549
+PS +2171 #DMG CRIT recibido -20%# 
+550
+PS +2522 #refleja un 15% del DMG recibido# 
+551
+EVA +823 #Curacion-P +7%# 
+552
+DEF +823 #maximo de PS +9%# 
+553
+DEF +1180 #maximo de PS +10%# 
+554
+PS +3254 #EXP por muerte de monstruos +5%# 
+555
+EVA +1180 #+8% DMG a objetivos con atributo oscuro# 
+556
+VEL +1602#DMG +1923 #VEL de movimiento +6%
+557
+PS Max. +4304#DEF +1282 #DMG CRIT recibido -20%
+558
+EVA +1602#maximo de PS +2692 #ATQ +10%
+559
+EVA +1602#DEF +1282 #EXP por muerte de monstruos +5%
+560
+DEF +2083#maximo de PS +2692 #maximo de PS +10%
+561
+Max de PS +4374#EVA +986 #refleja un 15% del DMG recibido
+562
+PS Max. +3088#DEF +2389 #DMG CRIT recibido -20%
+563
+EVA +1838#DEF +1131 #EXP por muerte de monstruos +5%
+564
+Max de PS +5017#DEF +1131 #refleja un 15% del DMG recibido
+565
+VEL +1838#DMG +2205 #DMG +10%
+566
+DEF +5017#EVA +1131 #PS +10%
+567
+EVA +1838#PS +3088 #Velocidad de movimiento +6%
+568
+EVA +2090#PS +3511 #Exp ganada +5%
+569
+Max de PS +5706#DEF +1672 #DMG CRIT recibido -20%

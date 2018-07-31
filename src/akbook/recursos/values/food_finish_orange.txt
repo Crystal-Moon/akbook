@@ -1,0 +1,138 @@
+501
+DMG +76 #DMG CRIT contra jefes +15%# 
+502
+CRIT +40 #PRE+4%# 
+503
+VEL+40 #ATQ contra jefes +5%# 
+504
+DMG +252 #Tasa CRIT contra jefes +2%# 
+505
+VEL +130 #VEL de movimiento +3%# 
+506
+PS +503 #DMG CRIT recibido de jefes -15%# 
+507
+CRIT +130 #10% de posibilidades de ATQ doble# 
+508
+CRIT +280 #+6% de DMG a objetivos con atributo fuego# 
+509
+VEL +280 #VEL de movimiento +3%# 
+510
+DMG +544 #Tasa CRIT contra jefes +3%# 
+511
+DMG +954 #+6% DMG a objetivos con atributo luz# 
+512
+VEL +490 #10% de posibilidades de ATQ doble# 
+513
+CRIT +490 #DMG CRIT contra jefes +20%# 
+514
+PS +1690 #Curacion-P +4%# 
+515
+DEF +617 #DMG recibido de jefes -5%# 
+516
+CRIT +617 #+6% de DMG a objetivos con atributo hielo# 
+517
+DMG +1202 #Tasa CRIT +4%# 
+518
+VEL +617 #VEL de movimiento +4%# 
+519
+CRIT +760#PRE +6%# 
+520
+DMG +1480 #10% de posibilidades de ATQ doble# 
+521
+VEL +760 #10% de posibilidades de ATQ doble# 
+522
+VEL +1090 #ATQ contra jefes +10%# 
+523
+DMG +2124 #6% de DMG a objetivos con atributo tormenta# 
+524
+CRIT +1090 #DMG CRIT contra jugadores +30%# 
+525
+CRIT +1479#VEL +863 #DMG CRIT contra jefes +30%
+526
+DEF +1923#EVA +863 #DMG recibido de jefes -5%
+527
+DMG +2844#VEL +863 #tasa CRIT contra jefes +4%
+528
+CRIT +1479#DMG +1682 #PRE +6%
+529
+VEL +1479#CRIT +863 #10% de posibilidades de ATQ doble
+530
+DMG +2884#CRIT +863 #10% de posibilidades de ATQ doble
+531
+CRIT +990#VEL +1697 #PRE +6%
+532
+DMG +3308#VEL +990 #10% de posibilidades de ATQ doble
+533
+DMG +1930#CRIT +1697 #10% de posibilidades de ATQ doble
+534
+CRIT +1697#VEL +990 #DMG critico contra jefes +30%
+535
+DMG +3308#CRIT +990#radio de critico contra jefes +4%
+536
+DEF +2206#EVA +990 #DMG recibido por jefes 5%
+537
+DEF +2508#EVA +990 #PS +8%
+538
+DMG +3762#VEL +1126 #CRIT +4% contra jefes
+539
+VEL +1930#CRIT +1126 #10% de posibilidades de ATQ doble
+540
+CRIT +1930#DMG +2195 #DMG CRIT +30% contra jefes
+541
+EVA +130 #+10% de posibilidades de conjuracion doble# 
+542
+DEF +130 #DMG recibido de jefes -4%# 
+543
+EVA +280 #EXP por muerte de monstruos +3%# 
+544
+DEF +280 #maximo de PS +4%# 
+545
+PS +1088 #Curacion-P +2%# 
+546
+DEF +490 #maximo de PS +6%# 
+547
+EVA +490 #10% de posibilidades de conjuracion doble# 
+548
+EVA +617 #ATQ contra jefes +10%# 
+549
+PS +2004 #DMG CRIT recibido jefes -20%# 
+550
+PS +2328 #refleja un 10% del DMG recibido# 
+551
+EVA +760 #Curacion-P +5%# 
+552
+DEF +760 #maximo de PS +5%# 
+553
+DEF +1090 #maximo de PS +8%# 
+554
+PS +3004 #EXP por muerte de monstruos +3%# 
+555
+EVA +1090 #+6% DMG a objetivos con atributo oscuro# 
+556
+VEL +1479#DMG +1682 #VEL de movimiento +4%
+557
+PS Max. +4038#DEF +1122 #DMG CRIT recibido de jefes -20%
+558
+EVA +1479#maximo de PS +2355 #ATQ contra jefes +10%
+559
+EVA +1479#DEF +1122 #EXP por muerte de monstruos +3%
+560
+DEF +1923#maximo de PS +2355 #maximo de PS +8%
+561
+Max de PS +4038#EVA +863 #refleja un 10% del DMG recibido
+562
+PS Max. +2702#DEF +2206 #DMG CRIT recibido de jefes -20%
+563
+EVA +1697#DEF +990 #EXP por muerte de monstruos +3%
+564
+Max de PS +4631#DEF +990 #refleja un 10% del DMG recibido
+565
+VEL +1697#DMG +1930 #DMG contra jefes +10%
+566
+DEF +4631#EVA +990 #PS +8%
+567
+EVA +1697#PS +2702 #Velocidad de movimiento +4%
+568
+EVA +1930#PS +3072 #Exp ganada +3%
+569
+Max de PS +5267#DEF +1463 #DMG CRIT recibido de jefes -20%

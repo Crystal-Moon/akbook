@@ -1,0 +1,40 @@
+/* 
+    Created on : 10-jun-2018, 15:14:36
+    Author     : Perla
+*/
+.tab-pane .tab-header-area .tab-header-background{
+    -fx-background-color:#29303A;
+    -fx-background-size: 0 0; 
+}
+
+.label{-fx-text-fill: #ffffff;}
+.anchor-pane{
+    -fx-background-color: #29303A;
+}
+
+.check-box{-fx-text-fill: #ffffff;}
+.check-box:selected .mark {
+    -fx-background-color: #0033cc;
+}
+
+#anchor-table{
+    -fx-background-color: #2D3F4A;
+}
+
+.button{
+    -fx-background-color: #3D5667;
+    -fx-text-fill: white;
+}
+
+.column-header{
+    -fx-background-color: #1B1C21;
+    -fx-font-style: italic;
+}
+.table-view{
+    -fx-background-color: #2D3F4A;
+    -fx-text-fill: white;
+}
+#label-table{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}

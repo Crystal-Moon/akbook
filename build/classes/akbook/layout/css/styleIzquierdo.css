@@ -1,0 +1,27 @@
+/* 
+    Created on : 04-jun-2018, 19:07:42
+    Author     : Perla
+*/
+.label{
+    -fx-text-fill: #ffffff;
+}
+.text-area{
+    -fx-text-fill: white;
+    -fx-bakground-color:transparent;
+}
+#anchor-izquierdo{
+    -fx-background-image:url("../frames/izquierdo.png");
+    -fx-background-size: 100% 100%;
+}
+#border-ing-principal{
+    -fx-border-color: #1B62B1;
+    -fx-border-radius:  5; 
+    -fx-border-width: 3;
+    -fx-border-style: solid;
+}
+#border-food-finish-izq{
+    -fx-border-color: #6DBC49;
+    -fx-border-radius:  5; 
+    -fx-border-width: 3;
+    -fx-border-style: solid;
+}

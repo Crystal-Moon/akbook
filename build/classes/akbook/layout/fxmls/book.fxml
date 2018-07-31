@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="610.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="akbook.layout.controller.BookController">
+   <children>
+      <TabPane id="pane-principal" fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="600.0" side="RIGHT" stylesheets="@../css/panePrincipal.css" tabClosingPolicy="UNAVAILABLE">
+  <tabs>
+            <Tab fx:id="tabBuscar" text="Buscar">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="366.0" prefWidth="571.0" side="RIGHT" stylesheets="@../css/styleBuscar.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <tabs>
+                            <Tab text="Alimentos">
+                                 <content>
+                              <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" stylesheets="@../css/styleBuscar.css">
+                                <items>
+                                  <AnchorPane id="anchor-table" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="anchor-pane">
+                                       <children>
+                                          <VBox prefHeight="366.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TableView fx:id="tableBuscar" prefHeight="340.0" prefWidth="271.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="columLvl" prefWidth="36.0" text="LVL" />
+                                                      <TableColumn fx:id="columNombreFood" prefWidth="233.0" text="Nombre" />
+                                                  </columns>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                </TableView>
+                                                      <Label id="label-table" fx:id="lblDetalles" alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="26.0" prefWidth="271.0" text="Seleccione un resultado para mas detalles." textAlignment="CENTER" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="anchor-pane">
+                                       <children>
+                                                <VBox prefHeight="366.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="23.0" prefWidth="271.0">
+                                                         <children>
+                                                            <Label prefHeight="26.0" prefWidth="250.0" text="Seleccione los atributos a buscar.">
+                                                               <font>
+                                                                  <Font name="System Bold" size="14.0" />
+                                                               </font>
+                                                               <padding>
+                                                                  <Insets left="3.0" />
+                                                               </padding>
+                                                            </Label>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handlerHelp" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../frames/help.png" />
+                                                         </image>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                               <HBox.margin>
+                                                                  <Insets top="3.0" />
+                                                               </HBox.margin>
+                                                      </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                <GridPane prefHeight="342.0" prefWidth="271.0">
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="75.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="114.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="95.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <CheckBox fx:id="checkDANrecibido" mnemonicParsing="false" text="-%DMG recibido" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <CheckBox fx:id="chackPRE" mnemonicParsing="false" text="+%PRE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                      <CheckBox fx:id="checkDAN" mnemonicParsing="false" text="+DMG" GridPane.rowIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                            </CheckBox>
+                                                      <CheckBox fx:id="checkPS" mnemonicParsing="false" text="+PS" GridPane.rowIndex="4">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                            </CheckBox>
+                                                      <CheckBox fx:id="checkDEF" mnemonicParsing="false" text="+DEF" GridPane.rowIndex="1">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                            </CheckBox>
+                                                      <CheckBox fx:id="checkVEL" mnemonicParsing="false" text="+VEL" GridPane.rowIndex="2">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                            </CheckBox>
+                                                      <CheckBox fx:id="checkEVA" mnemonicParsing="false" text="+EVA" GridPane.rowIndex="6">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                            </CheckBox>
+                                                      <CheckBox fx:id="checkDANobj" mnemonicParsing="false" onMouseClicked="#seleccionCheckObjetivo" text="+%DMG objetivo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <CheckBox fx:id="checkVELmov" mnemonicParsing="false" text="+%VEL mov." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <CheckBox fx:id="checkATQ" mnemonicParsing="false" text="+%ATQ" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <CheckBox fx:id="checkCuracion" mnemonicParsing="false" text="+%Curacion-P" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <CheckBox fx:id="checkATQprob" mnemonicParsing="false" text="+%prob ATQ" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Button fx:id="btnBusqueda" mnemonicParsing="false" onAction="#handlerBtnBuscarLista" text="Buscar" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                                                         <GridPane.margin>
+                                                            <Insets right="5.0" />
+                                                         </GridPane.margin>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                            </Button>
+                                                      <CheckBox fx:id="checkCRIT" mnemonicParsing="false" text="+CRIT" GridPane.rowIndex="5">
+                                                         <GridPane.margin>
+                                                            <Insets left="5.0" />
+                                                         </GridPane.margin>
+                                                            </CheckBox>
+                                                      <CheckBox fx:id="checkDANcrit" mnemonicParsing="false" text="+%DMG CRIT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <CheckBox fx:id="checkCRITtasa" mnemonicParsing="false" text="+%tasa CRIT" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <ComboBox fx:id="menuLvl" prefWidth="150.0" GridPane.columnIndex="1" />
+                                                      <ComboBox fx:id="menuElementos" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                         <GridPane.margin>
+                                                            <Insets right="5.0" />
+                                                         </GridPane.margin>
+                                                            </ComboBox>
+                                                      <Label text="Nivel:" GridPane.halignment="RIGHT">
+                                                         <GridPane.margin>
+                                                            <Insets right="5.0" />
+                                                         </GridPane.margin>
+                                                      </Label>
+                                                      <CheckBox fx:id="checkEXP" mnemonicParsing="false" text="+%EXP recibida" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets left="3.0" />
+                                                   </opaqueInsets>
+                                                </GridPane>
+                                                   </children>
+                                                </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                                 </content>
+                                 <graphic>
+                                    <VBox prefHeight="20.0" prefWidth="20.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../frames/tab_food.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Tab>
+                            <Tab disable="true" text="Proximamente">
+                                 <content>
+                                    <fx:include fx:id="" source="buscar_mineral.fxml" />
+                                 </content>
+                                 <graphic>
+                                    <VBox prefHeight="20.0" prefWidth="20.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../frames/mineral.PNG" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+            <VBox prefHeight="20.0" prefWidth="20.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../frames/buscar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+               </graphic>
+            </Tab>
+    <Tab fx:id="tabCocina" text="Cocina">
+         <content>
+            <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" styleClass=".split-pane" stylesheets="@../css/panePrincipal.css">
+              <items>
+                <AnchorPane id="anchor-izquierdo" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../css/styleIzquierdo.css">
+                     <children>
+                        <VBox layoutX="125.0" layoutY="50.0" prefHeight="400.0" prefWidth="283.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane alignment="CENTER_LEFT" prefHeight="318.0" prefWidth="283.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.66666412353516" minWidth="10.0" prefWidth="29.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.66666412353516" minWidth="10.0" prefWidth="55.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="157.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.66665649414062" minWidth="10.0" prefWidth="65.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="36.66666793823242" minHeight="10.0" prefHeight="33.33333206176758" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="56.66666603088379" minHeight="10.0" prefHeight="41.66666793823242" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="59.333335876464844" minHeight="10.0" prefHeight="34.666664123535156" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="75.66667175292969" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="69.66667175292969" minHeight="10.0" prefHeight="34.666656494140625" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="65.33332824707031" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label id="border-ing-principal" fx:id="imgIngrPrincipal" accessibleRole="IMAGE_VIEW" contentDisplay="GRAPHIC_ONLY" maxHeight="42.0" maxWidth="42.0" onMouseClicked="#handlerImgIngrPrincipal" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Label>
+                                    <Label fx:id="nombreIngrPrincipal" prefHeight="41.0" prefWidth="147.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Label fx:id="cantIngrPrincipal" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Label id="border-food-finish-izq" fx:id="imgFoodFinish" accessibleRole="IMAGE_VIEW" contentDisplay="GRAPHIC_ONLY" maxHeight="42.0" maxWidth="42.0" onMouseClicked="#handlerImgFoodFinish" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Label>
+                                    <Label fx:id="nombreFoodFinish" prefHeight="42.0" prefWidth="150.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Label fx:id="imgFoodBase" contentDisplay="GRAPHIC_ONLY" maxHeight="42.0" maxWidth="42.0" onMouseClicked="#handlerImgFoodBase" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Label>
+                                    <Label fx:id="nombreFoodBase" prefHeight="40.0" prefWidth="149.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <Label fx:id="imgIngr2" contentDisplay="GRAPHIC_ONLY" maxHeight="42.0" maxWidth="42.0" onMouseClicked="#handlerImgIngr2" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Label>
+                                    <Label fx:id="nombreIngr2" prefHeight="43.0" prefWidth="150.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <Label fx:id="cantIngr2" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                    <Label text="1" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                 </children>
+                              </GridPane>
+                              <GridPane alignment="BOTTOM_RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="283.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.66666412353516" minWidth="10.0" prefWidth="120.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.66667175292969" minWidth="10.0" prefWidth="42.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="121.66667175292969" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="38.333343505859375" minHeight="10.0" prefHeight="38.333343505859375" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="38.333343505859375" minHeight="10.0" prefHeight="38.333343505859375" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="23.666656494140625" minHeight="10.0" prefHeight="15.666656494140625" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="silverMoneyIzq" alignment="BOTTOM_RIGHT" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="goldMoneyIzq" alignment="BOTTOM_RIGHT" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <SplitPane dividerPositions="0.377" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" stylesheets="@../css/styleDerecho.css">
+                    <items>
+                      <AnchorPane id="anchor-der-sup" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@../css/styleDerecho.css">
+                           <children>
+                              <VBox layoutX="65.0" layoutY="-32.0" prefHeight="135.0" prefWidth="282.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <GridPane prefHeight="135.0" prefWidth="282.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.66665649414062" minWidth="10.0" prefWidth="61.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="221.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="42.33333206176758" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="29.666664123535156" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="nombreItemDer" prefHeight="67.0" prefWidth="218.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="7.0" />
+                                             </padding>
+                                                </Label>
+                                          <Label fx:id="imgItemDer" contentDisplay="GRAPHIC_ONLY" maxHeight="42.0" maxWidth="42.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handlerHelp" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                             <image>
+                                                <Image url="@../frames/help.png" />
+                                             </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <StackPane fx:id="stackInfo" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="anchor-info-npc" fx:id="anchorInfoNpc" focusTraversable="true" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="225.0" prefWidth="282.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane prefHeight="189.0" prefWidth="284.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.66668701171875" minWidth="10.0" prefWidth="12.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="273.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="87.66665649414062" minHeight="10.0" prefHeight="12.333328247070312" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="168.6666717529297" minHeight="10.0" prefHeight="168.6666717529297" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="168.6666717529297" minHeight="10.0" prefHeight="168.6666717529297" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label fx:id="lblInfoNpc" alignment="TOP_LEFT" prefHeight="141.0" prefWidth="234.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                      </Label>
+                                                <Label fx:id="lblStatWhite" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <padding>
+                                                      <Insets left="5.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="284.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.5" minWidth="10.0" prefWidth="137.5" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.5" minWidth="10.0" prefWidth="36.5" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.5" minWidth="10.0" prefWidth="108.5" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="29.0" minHeight="7.33331298828125" prefHeight="7.33331298828125" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="18.66668701171875" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="29.0" minHeight="7.0" prefHeight="8.33331298828125" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label fx:id="silverMoneyDer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="goldMoneyDer" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="anchor-info-food" fx:id="anchorInfoFood" focusTraversable="true" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="228.0" prefWidth="284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label id="lbl-lvl-info" fx:id="lvlInfoFood" prefHeight="45.0" prefWidth="256.0">
+                                             <VBox.margin>
+                                                <Insets left="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <TabPane id="tab-food-color" fx:id="tabFood" prefHeight="172.0" prefWidth="274.0" side="BOTTOM" stylesheets="@../css/styleTabFood.css" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab id="tab-green" onSelectionChanged="#alSeleccionarGreen" text="Delicioso">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="green">
+                                                         <children>
+                                                            <VBox prefHeight="198.0" prefWidth="283.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <GridPane prefHeight="182.0" prefWidth="274.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="5.0" prefWidth="12.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="259.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="14.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="67.0" minHeight="6.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="133.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label fx:id="lblStatGreen" prefHeight="133.0" prefWidth="260.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                           <padding>
+                                                                              <Insets left="5.0" />
+                                                                           </padding>
+                                                                              </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab id="tab-orange" onSelectionChanged="#alSeleccionarOrange" text="Exquisito">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="orange">
+                                                         <children>
+                                                            <VBox prefHeight="198.0" prefWidth="283.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <GridPane prefHeight="144.0" prefWidth="285.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="8.0" prefWidth="12.5" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="258.5" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="14.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints maxHeight="67.0" minHeight="7.5" prefHeight="9.5" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="136.5" minHeight="10.0" prefHeight="134.5" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label fx:id="lblStatOrange" prefHeight="135.0" prefWidth="258.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                           <padding>
+                                                                              <Insets left="5.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                                <Tab id="tab-purple" onSelectionChanged="#alSeleccionarPurple" text="Sublime">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="purple">
+                                                         <children>
+                                                            <VBox prefHeight="198.0" prefWidth="283.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <GridPane prefHeight="187.0" prefWidth="274.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="7.5" prefWidth="12.5" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="259.5" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="0.0" prefWidth="13.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="58.0" minHeight="7.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="134.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label fx:id="lblStatPurple" prefHeight="132.0" prefWidth="260.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                           <padding>
+                                                                              <Insets left="5.0" />
+                                                                           </padding>
+                                                                              </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                                <Tab id="tab-golden" onSelectionChanged="#alSeleccionarGold" text="Real">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="golden">
+                                                         <children>
+                                                            <VBox prefHeight="198.0" prefWidth="283.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <GridPane prefHeight="187.0" prefWidth="274.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="3.0" prefWidth="12.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="260.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="13.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="58.0" minHeight="6.5" prefHeight="9.5" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="136.5" minHeight="10.0" prefHeight="133.5" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label fx:id="lblStatGold" prefHeight="133.0" prefWidth="260.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                           <padding>
+                                                                              <Insets left="5.0" />
+                                                                           </padding>
+                                                                              </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </Tab>
+                                            </tabs>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </TabPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="anchor-info-ingr" fx:id="anchorInfoIngr" focusTraversable="true" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="225.0" prefWidth="282.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.66665649414062" minWidth="9.0" prefWidth="12.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.66668701171875" minWidth="10.0" prefWidth="193.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.6666564941406" minWidth="10.0" prefWidth="78.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="71.66665649414062" minHeight="8.333328247070312" prefHeight="32.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="198.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label fx:id="lblArbolIngr" prefHeight="22.0" prefWidth="191.0" wrapText="true" GridPane.columnIndex="1">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <GridPane.margin>
+                                                <Insets top="2.0" />
+                                             </GridPane.margin>
+                                                </Label>
+                                          <ImageView id="img-arbol" fx:id="imgArbolIngr" fitHeight="187.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button fx:id="btnMapIngr" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlerBtnMapIngr" text="Ubicacion" GridPane.columnIndex="2" GridPane.valignment="CENTER">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                    </items>
+                  </SplitPane>
+              </items>
+            </SplitPane>
+         </content>
+         <graphic>
+            <VBox prefHeight="20.0" prefWidth="20.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../frames/money-cocina.png" />
+                     </image>
+                        </ImageView>
+               </children>
+            </VBox>
+         </graphic>
+            </Tab>
+      <Tab disable="true" text="Proximamente">
+       <content>
+                <fx:include fx:id="" source="herreria.fxml" />
+            </content>
+      </Tab>
+  </tabs>
+</TabPane>
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*** GENERATED FROM TEMPLATE - DO NOT EDIT ***
+***       EDIT ../build.xml INSTEAD       ***
+-->
+
+<project name="jfx-impl" default="jfx-deployment" basedir=".." xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1" 
+         xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <description>JavaFX-specific Ant calls</description>
+
+
+    <!-- Empty placeholders for easier customization in ../build.xml -->
+    
+    <target name="-pre-jfx-jar">
+        <!-- Called right before <fx:jar> task. You can override this target in the ../build.xml file. -->
+    </target>
+
+    <target name="-post-jfx-jar">
+        <!-- Called right after <fx:jar> task. You can override this target in the ../build.xml file. -->
+    </target>
+
+    <target name="-pre-jfx-deploy">
+        <!-- Called right before <fx:deploy> task. You can override this target in the ../build.xml file. -->
+    </target>
+
+    <target name="-post-jfx-deploy">
+        <!-- Called right after <fx:deploy> task. You can override this target in the ../build.xml file. -->
+    </target>
+    
+    <target name="-pre-jfx-native">
+        <!-- Called right before the call to native packager (just after -pre-jfx-deploy). You can override this target in the ../build.xml file. -->
+    </target>
+
+    <target name="-post-jfx-native">
+        <!-- Called right after the call to native packager (just after -post-jfx-deploy). You can override this target in the ../build.xml file. -->
+    </target>
+    
+    
+    <!-- Check system and JDK version -->
+
+    <target name="-check-operating-system">
+        <condition property="running.on.mac">
+            <os family="mac"/>
+        </condition>
+        <condition property="running.on.unix">
+            <os family="unix"/>
+        </condition>
+        <condition property="running.on.windows">
+            <os family="windows"/>
+        </condition>
+        <echo message="running.on.mac = ${running.on.mac}" level="verbose"/>
+        <echo message="running.on.unix = ${running.on.unix}" level="verbose"/>
+        <echo message="running.on.windows = ${running.on.windows}" level="verbose"/>
+    </target>
+
+    <target name="-check-platform-home-fxsdk-java" depends="-check-property-javafx.sdk" if="javafx.sdk.defined">
+        <condition property="do.set.platform.home.fxsdk.java">
+            <and>
+                <not><isset property="active.platform.home.java.executable"/></not>
+                <or>
+                    <available file="${javafx.sdk}${file.separator}bin${file.separator}java"/>
+                    <available file="${javafx.sdk}${file.separator}bin${file.separator}java.exe"/>
+                </or>
+            </and>
+        </condition>
+    </target>
+    <target name="-set-platform-home-fxsdk-java" depends="-check-platform-home-fxsdk-java" if="do.set.platform.home.fxsdk.java">
+        <property name="active.platform.home.java.executable" value="${javafx.sdk}${file.separator}bin${file.separator}java"/>
+    </target>
+    <target name="-check-platform-home-java" if="platform.home">
+        <condition property="do.set.platform.home.java">
+            <and>
+                <not><isset property="active.platform.home.java.executable"/></not>
+                <or>
+                    <available file="${platform.home}${file.separator}bin${file.separator}java"/>
+                    <available file="${platform.home}${file.separator}bin${file.separator}java.exe"/>
+                </or>
+            </and>
+        </condition>
+    </target>
+    <target name="-set-platform-home-java" depends="-set-platform-home-fxsdk-java,-check-platform-home-java" if="do.set.platform.home.java">
+        <property name="active.platform.home.java.executable" value="${platform.home}${file.separator}bin${file.separator}java"/>
+    </target>
+    <target name="-check-platform-home-probjdk-java" unless="active.platform.home.java.executable">
+        <condition property="do.set.platform.home.probjdk.java">
+            <and>
+                <not><isset property="active.platfor

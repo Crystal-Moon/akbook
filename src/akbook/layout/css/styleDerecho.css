@@ -1,0 +1,39 @@
+/* 
+    Created on : 04/06/2018, 21:03:11
+    Author     : crystal
+*/
+.label{
+    -fx-text-fill: white;
+}
+.button{
+    -fx-text-fill: white;
+    -fx-background-image: url("../frames/button.png");
+    -fx-background-size: 100% 100%;
+    -fx-background-radius: 4, 3;
+    -fx-background-insets: 0, 0;
+}
+#img-arbol{-fx-background-size: 100% 100%;}
+
+#anchor-info-npc{
+    -fx-background-image:url("../frames/subInfoNpc.png");
+    -fx-background-size: 100% 100%;
+}
+#anchor-info-food{
+    -fx-background-image:url("../frames/subInfoFood.png");
+    -fx-background-size: 100% 100%;
+}
+#anchor-info-ingr{
+    -fx-background-image:url("../frames/subInfoIngr.png");
+    -fx-background-size: 100% 100%;
+}
+#anchor-der-sup{
+    -fx-background-image:url("../frames/derSuperior.png");
+    -fx-background-size: 100% 100%;
+}
+/*-----Text colors------*/
+#white{-fx-text-fill: white;-fx-font-size:16;}
+#blue{-fx-text-fill: #1B62B1;-fx-font-size:16;}
+#green{-fx-text-fill: #6DBC49;-fx-font-size:16;}
+#orange{-fx-text-fill: #DC8030;-fx-font-size:16;}
+#purple{-fx-text-fill: #8D46C9;-fx-font-size:16;}
+#gold{-fx-text-fill: #FFE363;-fx-font-size:16;}

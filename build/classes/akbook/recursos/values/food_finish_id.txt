@@ -1,0 +1,69 @@
+501#+DMG +%DMG CRIT 
+502#+CRIT +%PRE
+503#+VEL +%ATQ
+504#+DMG +%DMG CRIT
+505#+VEL +%VEL mov.
+506#+PS -%DMG recibido
+507#+CRIT +%prob ATQ
+508#+CRIT Todos Fuego
+509#+VEL +%VEL mov.
+510#+DMG +%DMG CRIT
+511#+DMG Todos Luz
+512#+VEL +%prob ATQ
+513#+CRIT +%DMG CRIT
+514#+PS +%Curacion-P
+515#+DEF -%DMG recibido
+516#+CRIT Todos Hielo
+517#+DMG +%tasa CRIT
+518#+VEL +%VEL mov.
+519#+CRIT +%PRE
+520#+DMG +%prob ATQ
+521#+VEL +%prob ATQ
+522#+VEL +%ATQ
+523#+DMG Todos Tormenta
+524#+CRIT +%DMG CRIT
+525#+CRIT +VEL +%DMG CRIT
+526#+DEF +EVA -%DMG recibido
+527#+DMG +VEL +%tasa CRIT
+528#+CRIT +DMG +%PRE
+529#+VEL +CRIT +%prob ATQ
+530#+DMG +CRIT +%prob ATQ
+531#+CRIT +VEL +%PRE
+532#+DMG +VEL +%prob ATQ
+533#+DMG +CRIT +%prob ATQ
+534#+CRIT +VEL +%DMG CRIT
+535#+DMG +CRIT +%tasa CRIT
+536#+DEF +EVA -%DMG recibido
+537#+DEF +EVA +PS
+538#+DMG +VEL +%tasa CRIT
+539#+VEL +CRIT +%prob ATQ
+540#+CRIT +DMG +%DMG CRIT
+541#+EVA +%prob ATQ
+542#+DEF -%DMG recibido
+543#+EVA +%EXP recibida
+544#+DEF +PS
+545#+PS +%Curacion-P
+546#+DEF +PS
+547#+EVA +%prob ATQ
+548#+EVA +%ATQ
+549#+PS -%DMG recibido
+550#+PS -%DMG recibido
+551#+EVA +%Curacion-P
+552#+DEF +PS
+553#+DEF +PS
+554#+PS +%EXP recibida
+555#+EVA Todos Oscuridad
+556#+VEL +DMG +%VEL mov.
+557#+PS +DEF -%DMG recibido
+558#+EVA +PS +%ATQ
+559#+EVA +DEF +%EXP recibida
+560#+DEF +PS
+561#+PS +EVA -%DMG recibido
+562#+PS +DEF -%DMG recibido
+563#+EVA +DEF +%EXP recibida
+564#+PS +DEF -%DMG recibido
+565#+VEL +DMG
+566#+DEF +EVA +PS
+567#+EVA +PS +%VEL mov.
+568#+EVA +PS +%EXP recibida
+569#+PS +DEF -%DMG recibido

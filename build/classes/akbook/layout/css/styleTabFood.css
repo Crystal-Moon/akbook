@@ -1,0 +1,15 @@
+/* --- stylo basico dela tabpane generica---*/
+#tab-food-color *.tab-header-area *.tab-header-background{
+    -fx-background-color: transparent;
+    -fx-background-size: 0 0;
+}
+.tab-pane .tab{-fx-background-color: #272E38;}
+.tab-pane .tab:selected{-fx-background-color: #2D4855;}
+.green .label{-fx-text-fill:#6DBC49;}
+.orange .label{-fx-text-fill:#DC8030;}
+.purple .label{-fx-text-fill:#8D46C9;}
+.golden .label{-fx-text-fill:#FFE363;}
+#tab-green .tab-label{-fx-text-fill:#6DBC49; -fx-font-weight:bold;}
+#tab-orange .tab-label{-fx-text-fill:#DC8030; -fx-font-weight:bold;}
+#tab-purple .tab-label{-fx-text-fill:#8D46C9; -fx-font-weight:bold;}
+#tab-golden .tab-label{-fx-text-fill:#FFE363; -fx-font-weight:bold;}

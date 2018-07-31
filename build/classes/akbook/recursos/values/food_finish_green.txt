@@ -1,0 +1,138 @@
+501
+DMG+69#DMG CRIT +5%# 
+502
+CRIT+36#PRE+3%# 
+503
+VEL+36#ATQ +5%# 
+504
+DMG+231#DMG CRIT +1%# 
+505
+VEL +119#VEL de movimiento +2%# 
+506
+PS +461#DMG CRIT recibido -7%# 
+507
+CRIT +119#5% de posibilidades de ATQ doble# 
+508
+CRIT +256#+5% de DMG a objetivos con atributo fuego# 
+509
+VEL +256#VEL de movimiento +2%# 
+510
+DMG +544#Tasa CRIT +2%# 
+511
+DMG +875#+5% DMG a objetivos con atributo luz# 
+512
+VEL +449#5% de posibilidades de ATQ doble# 
+513
+CRIT +449#DMG CRIT +7%# 
+514
+PS +1549#Curacion-P +3%# 
+515
+DEF +565#DMG recibido -3%# 
+516
+CRIT +565#+5% de DMG a objetivos con atributo hielo# 
+517
+DMG +1102#Tasa CRIT +1%# 
+518
+VEL +565#VEL de movimiento +3%# 
+519
+CRIT +696#PRE +5%# 
+520
+DMG +1356#5% de posibilidades de ATQ doble# 
+521
+VEL +696#5% de posibilidades de ATQ doble# 
+522
+VEL +999#ATQ +5%# 
+523
+DMG +1947#5% de DMG a objetivos con atributo tormenta# 
+524
+CRIT +999#DMG CRIT +9%# 
+525
+CRIT +1356#VEL +740#DMG CRIT +9%
+526
+DEF +1763#EVA +740#DMG recibido -3%
+527
+DMG +2644#VEL +740#tasa CRIT +3%
+528
+CRIT +1356#DMG +1442#PRE +5%
+529
+VEL +1356#CRIT +740#5% de posibilidades de ATQ doble
+530
+DMG +2644#CRIT +740#5% de posibilidades de ATQ doble
+531
+CRIT +848#VEL +1555#PRE +5%
+532
+DMG +3032#VEL +848#5% de posibilidades de ATQ doble
+533
+DMG +1654#CRIT +1555#5% de posibilidades de ATQ doble
+534
+CRIT +1555#VEL +848#DMG critico +9%
+535
+DMG +3032#CRIT +848#radio de critico +3%
+536
+DEF +2022#EVA +848#DMG recibido -1%
+537
+DEF +2299#EVA +965#PS +7%
+538
+DMG +3449#VEL +965#CRIT +3%
+539
+VEL +1769#CRIT +965#5% de posibilidades de ATQ doble
+540
+CRIT +1769#DMG +1881#DMG CRIT +9%
+541
+EVA +119#+5% de posibilidades de conjuracion doble# 
+542
+DEF +119#DMG recibido -2%# 
+543
+EVA +256#EXP por muerte de monstruos +2%# 
+544
+DEF +256#maximo de PS +3%# 
+545
+PS +998#Curacion-P +2%# 
+546
+DEF +449#maximo de PS +5%# 
+547
+EVA +449#5% de posibilidades de conjuracion doble# 
+548
+EVA +565#ATQ +5%# 
+549
+PS +1837#DMG CRIT recibido -10%# 
+550
+PS +2134#refleja un 5% del DMG recibido# 
+551
+EVA +696#Curacion-P +4%# 
+552
+DEF +696#maximo de PS +6%# 
+553
+DEF +999#maximo de PS +7%# 
+554
+PS +2753#EXP por muerte de monstruos +2%# 
+555
+EVA +999#+5% DMG a objetivos con atributo oscuro# 
+556
+VEL +1356#DMG +1442#VEL de movimiento +3%
+557
+PS Max. +3701#DEF +961#DMG CRIT recibido -10%
+558
+EVA +1356#maximo de PS +2019#ATQ +5%
+559
+EVA +1356#DEF +961#EXP por muerte de monstruos +2%
+560
+DEF +1763#maximo de PS +2019#maximo de PS +7%
+561
+Max de PS +3701#EVA +740 #refleja un 5% del DMG recibido
+562
+PS Max. +2316#DEF +2022 #DMG CRIT recibido -10%
+563
+EVA +1555#DEF +848 #EXP por muerte de monstruos +2%
+564
+Max de PS +4245#DEF +848 #refleja un 5% del DMG recibido
+565
+VEL +1555#DMG +1654 #DMG +5%
+566
+DEF +4245#EVA +848 #PS +7%
+567
+EVA +1555#PS +2316 #Velocidad de movimiento +3%
+568
+EVA +1769#PS +2633 #Exp ganada +2%
+569
+Max de PS +4828#DEF +1254 #DMG CRIT recibido -10%
