@@ -4,7 +4,7 @@
 */
 package akbook.entidades.base;
 
-import akbook.entidades.enums.Calidad;
+import akbook.entidades.complementarias.Calidad;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -12,19 +12,22 @@ import javafx.beans.property.StringProperty;
  *
  * @author crystal
  */
+/*
+Clase padre de todo el programa.
+*/
 public abstract class Item {
     
+    protected int id_base;
     protected String[] nombre = new String[5];
     protected Calidad colorBorde;
     protected String archivo;
-    protected int id_base;
-    protected int lvlRequerido;
+    protected int lvl;
 
     public String getNombre() {return nombre[0];}  
     public String getArchivo() {return archivo;}
     public Calidad getColorBorde() {return colorBorde;}
     public int getId_base() {return id_base; }
-    public int getLvlRequerido() {return lvlRequerido;}
+    public int getLvl() {return lvl;}
     
     public StringProperty getNombreProperty(){
         String name=this.nombre[0];
@@ -33,8 +36,9 @@ public abstract class Item {
     }
     
     public StringProperty getLvlProperty(){
-        String nivel=String.valueOf(this.lvlRequerido);
+        String nivel=String.valueOf(this.lvl);
         StringProperty level=new SimpleStringProperty(nivel);
         return level;
     }
+    
 }

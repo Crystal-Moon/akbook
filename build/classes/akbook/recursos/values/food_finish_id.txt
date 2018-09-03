@@ -40,7 +40,7 @@
 540#+CRIT +DMG +%DMG CRIT
 541#+EVA +%prob ATQ
 542#+DEF -%DMG recibido
-543#+EVA +%EXP recibida
+543#+EVA +%EXP
 544#+DEF +PS
 545#+PS +%Curacion-P
 546#+DEF +PS
@@ -51,19 +51,19 @@
 551#+EVA +%Curacion-P
 552#+DEF +PS
 553#+DEF +PS
-554#+PS +%EXP recibida
+554#+PS +%EXP
 555#+EVA Todos Oscuridad
 556#+VEL +DMG +%VEL mov.
 557#+PS +DEF -%DMG recibido
 558#+EVA +PS +%ATQ
-559#+EVA +DEF +%EXP recibida
+559#+EVA +DEF +%EXP
 560#+DEF +PS
 561#+PS +EVA -%DMG recibido
 562#+PS +DEF -%DMG recibido
-563#+EVA +DEF +%EXP recibida
+563#+EVA +DEF +%EXP
 564#+PS +DEF -%DMG recibido
 565#+VEL +DMG
 566#+DEF +EVA +PS
 567#+EVA +PS +%VEL mov.
-568#+EVA +PS +%EXP recibida
+568#+EVA +PS +%EXP
 569#+PS +DEF -%DMG recibido

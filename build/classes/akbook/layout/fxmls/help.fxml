@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -23,7 +24,10 @@
                         <Label text="Aura Kingdom ©2018 Aeria Games GmbH." />
                         <Label text="Todos sus derechos reservados." wrapText="true" />
                         <Hyperlink fx:id="pageOficial" text="es.aurakingdom.aeriagames.com/" underline="true" wrapText="true" />
-                        <Label fx:id="lblAutor" text="autor" wrapText="true" />
+                        <Label fx:id="lblAutor" text="autor" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="2.0" top="3.0" />
+                           </VBox.margin></Label>
                      </children>
                   </VBox>
                </children>

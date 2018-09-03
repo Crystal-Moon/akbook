@@ -1,14 +1,13 @@
 /* 
-    Created on : 25/07/2018, 21:03:11
+    Created on : 28/06/2018, 21:03:11
     Author     : crystal
 */
 package akbook.start;
 
 import akbook.entidades.base.CtrlPrincipal;
-import akbook.entidades.enums.Ruta;
+import akbook.entidades.base.ErrorAK;
+import akbook.entidades.complementarias.Ruta;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,15 +20,20 @@ import javafx.stage.StageStyle;
  *
  * @author crystal
  */
+/*
+    Runneable.
+*/
 public class AKRun extends Application {
-
+    
     private static Stage primary;
     private AnchorPane main;
     private AnchorPane root1;
 
     @Override
     public void start(Stage stage){
-
+        /*
+        Inicializacion del cover book.
+        */
         AKRun.primary = stage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Ruta.fxml.getRuta() + "cover.fxml"));
         try {
@@ -43,14 +47,15 @@ public class AKRun extends Application {
             CtrlPrincipal ven = loader.getController();
             ven.setMain(this);
         } catch (IOException ex) {
-            Logger.getLogger(AKRun.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println(ex.getMessage());
-            System.out.println("error al cargar fxml");
+            ErrorAK.errorTxt("index.fmxl");
         }
     }
 
     public void ventanaInterna(String ventana) {
-
+        /*
+        Abre toda ventana nueva del book
+        ventana - nombre del fxml.
+        */
         FXMLLoader loader1 = new FXMLLoader(getClass().getResource(Ruta.fxml.getRuta() + ventana));
         try {
             root1 = loader1.load();
@@ -72,10 +77,7 @@ public class AKRun extends Application {
             CtrlPrincipal ven = loader1.getController();
             ven.setMain(this);
         } catch (IOException ex) {
-            Logger.getLogger(AKRun.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println(ex.getCause());
-            System.out.println(ex.getMessage());
-            System.out.println("error al cargar fxml");
+            ErrorAK.errorTxt(ventana);
         }
     }
 

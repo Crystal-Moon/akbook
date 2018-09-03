@@ -8,13 +8,14 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author crystal
  */
+/*
+Non-Player Character
+*/
 public class NPC {
     
     private int id_base;
@@ -29,12 +30,15 @@ public class NPC {
     public NPC() {}
     
 //------- DAO ---------
-    public static NPC traerNpc(int id, Connection conn){
-       
+    public static NPC traerNpc(int id, Connection conn) throws SQLException{
+        /*
+        id - identificador unico en la db
+        conn - conexion compartida entre toda la busqueda
+        */
         Statement stmtConsulta=null;
         ResultSet rs = null;
         NPC elNpc=new NPC();
-    try{
+    
         String laConsulta = "SELECT id, titulo, nombre, mapa FROM npc WHERE id="+id+";";
         stmtConsulta = conn.createStatement(); 
         rs = stmtConsulta.executeQuery(laConsulta); 
@@ -45,19 +49,9 @@ public class NPC {
             elNpc.nombre=rs.getString("nombre");
             elNpc.mapa=rs.getString("mapa");
         }
-    }catch (SQLException ex){
-        System.out.println("error al traer datos de NPC");
-    }   catch (Exception ex) {
-            Logger.getLogger(NPC.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("error al conectar");
-        }finally{
-        try{
-            rs.close();
-            stmtConsulta.close();
-        }catch (SQLException e){
-            System.out.println("error al cerrar conexion");
-        }
-    }
-    return elNpc;
+        rs.close();
+        stmtConsulta.close();
+        
+        return elNpc;
     }
 }

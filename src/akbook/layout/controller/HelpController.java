@@ -10,6 +10,7 @@
 package akbook.layout.controller;
 
 import akbook.entidades.base.CtrlPrincipal;
+import akbook.entidades.base.ErrorAK;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
@@ -70,6 +71,7 @@ public class HelpController extends CtrlPrincipal implements Initializable {
             try {
                 Desktop.getDesktop().browse(new URI("http://overflyx.com/"));
             } catch (IOException | URISyntaxException e1) {
+                ErrorAK.errorDeRed();
             }
         });
     
@@ -77,6 +79,7 @@ public class HelpController extends CtrlPrincipal implements Initializable {
             try {
                 Desktop.getDesktop().browse(new URI("http://www.aurakingdom-db.com/"));
             } catch (IOException | URISyntaxException e1) {
+                ErrorAK.errorDeRed();
             }
         });
         
@@ -84,6 +87,7 @@ public class HelpController extends CtrlPrincipal implements Initializable {
             try {
                 Desktop.getDesktop().browse(new URI("http://es.portskandia.com/"));
             } catch (IOException | URISyntaxException e1) {
+                ErrorAK.errorDeRed();
             }
         });
         
@@ -91,6 +95,7 @@ public class HelpController extends CtrlPrincipal implements Initializable {
             try {
                 Desktop.getDesktop().browse(new URI("https://sites.google.com/site/aurakingdomguia/"));
             } catch (IOException | URISyntaxException e1) {
+                ErrorAK.errorDeRed();
             }
         });
         
@@ -98,6 +103,7 @@ public class HelpController extends CtrlPrincipal implements Initializable {
             try {
                 Desktop.getDesktop().browse(new URI("https://es.aurakingdom.aeriagames.com/"));
             } catch (IOException | URISyntaxException e1) {
+                ErrorAK.errorDeRed();
             }
         });
     }    

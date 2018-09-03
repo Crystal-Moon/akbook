@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -25,6 +26,8 @@ public class MapController extends CtrlPrincipal implements Initializable {
     private ImageView imgMap1;
     @FXML
     private ImageView imgMap2;
+    @FXML
+    private TabPane paneMaps;
     @FXML
     private Tab tab1;
     @FXML
@@ -43,6 +46,15 @@ public class MapController extends CtrlPrincipal implements Initializable {
         } else {
             tab2.setText("No disponible");
             tab2.setDisable(true);
+        }
+        
+        if(ubicacionElegida.map3Exist()) {
+            Tab tab3 = new Tab(ubicacionElegida.getNameMap3());
+            paneMaps.getTabs().add(tab3);
+            if(ubicacionElegida.map4Exist()) {
+                Tab tab4 = new Tab(ubicacionElegida.getNameMap4());
+                paneMaps.getTabs().add(tab4);
+            }
         }
     }
 

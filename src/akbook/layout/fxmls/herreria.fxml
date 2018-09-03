@@ -1,21 +1,402 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="571.0" stylesheets="@../css/styleHerreria.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="akbook.layout.controller.HerreriaController">
    <children>
-      <VBox prefHeight="366.0" prefWidth="571.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label text="Label" />
-            <Button mnemonicParsing="false" text="Button" />
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-            <TextArea prefHeight="183.0" prefWidth="100.0" text="Anchor Pane a modificar, todo elemento a modo de prueba Respetar Anchor Pane base" />
-            <Button mnemonicParsing="false" text="Button" />
-         </children>
-      </VBox>
+      <SplitPane dividerPositions="0.5" prefHeight="366.0" prefWidth="571.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane id="anchor-izq" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="364.0" prefWidth="285.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="282.0" prefWidth="285.0">
+                           <children>
+                              <GridPane prefHeight="278.0" prefWidth="70.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.5" minWidth="9.5" prefWidth="9.5" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="43.5" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="10.0" prefWidth="17.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="44.5" minHeight="10.0" prefHeight="30.5" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.5" minHeight="10.0" prefHeight="41.5" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="ALWAYS" />
+                                </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="item1" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerItem1" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <ImageView fx:id="item2" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerItem2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="item3" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerItem3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="item4" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerItem4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="item5" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerItem5" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="arrow0" disable="true" fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <image>
+                                          <Image url="@../frames/arrow-herr.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="arrow1" disable="true" fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <image>
+                                          <Image url="@../frames/arrow-herr.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="arrow2" disable="true" fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <image>
+                                          <Image url="@../frames/arrow-herr.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="arrow3" disable="true" fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <image>
+                                          <Image url="@../frames/arrow-herr.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="arrow4" disable="true" fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <image>
+                                          <Image url="@../frames/arrow-herr.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                    <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#handlerBtnSet" prefHeight="16.0" prefWidth="43.0" text="Set" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="System Bold" size="9.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane prefHeight="278.0" prefWidth="207.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.5" minWidth="7.5" prefWidth="11.5" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.5" minWidth="10.0" prefWidth="186.5" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.5" minWidth="10.0" prefWidth="12.5" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="90.5" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="90.5" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="90.5" minHeight="10.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="28.5" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="163.5" minHeight="10.0" prefHeight="80.5" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="73.5" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="26.5" minHeight="10.0" prefHeight="24.5" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="nombreItem" prefHeight="25.0" prefWidth="177.0" text="Nombre" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblNvlItem" prefHeight="16.0" prefWidth="178.0" text="Lvl" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblStats" prefHeight="65.0" prefWidth="180.0" text="Stats" textFill="#51e96d" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblSetCompleto" prefHeight="70.0" prefWidth="185.0" text="Set Completo" textFill="#9933ff" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblParte" text="Parte" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <GridPane>
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.5" minWidth="10.0" prefWidth="79.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="67.0" minWidth="10.0" prefWidth="43.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.5" minWidth="10.0" prefWidth="34.5" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.5" minWidth="10.0" prefWidth="43.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.5" minWidth="10.0" prefWidth="85.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="26.5" minHeight="10.0" prefHeight="14.5" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fx:id="imgNucleo" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerNucleo" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgBase" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#handlerBase" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+          <AnchorPane id="anchor-der" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="364.0" prefWidth="284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane prefHeight="153.0" prefWidth="284.0">
+                          <columnConstraints>
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="65.5" minWidth="10.0" prefWidth="25.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.5" minWidth="10.0" prefWidth="37.5" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.5" minWidth="2.0" prefWidth="11.5" />
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="49.0" />
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="52.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.5" minWidth="0.0" prefWidth="49.5" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.5" minWidth="10.0" prefWidth="60.5" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="37.5" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="53.5" minHeight="6.0" prefHeight="18.5" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="43.5" minHeight="10.0" prefHeight="39.5" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="26.5" minHeight="10.0" prefHeight="15.5" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fx:id="imgNucleoDer" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerNucleo" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgAleacionNucleo" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerSemiFacturado" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgM1Nucleo" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerMineralNucleo1" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgM2Nucleo" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerMineralNucleo2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets right="8.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label fx:id="cAleacion" alignment="CENTER" contentDisplay="CENTER" styleClass="label-der" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="6.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblCM1nucleo" alignment="CENTER" contentDisplay="CENTER" styleClass="label-der" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="6.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblCM2nucleo" alignment="CENTER" contentDisplay="CENTER" styleClass="label-der" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="6.0" right="8.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ImageView fx:id="imgSF" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerSemiFacturado" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgM1SF" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerMineralSemi1" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgM2SF" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerMineralSemi2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ImageView>
+                              <ImageView fx:id="imgM3SF" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerMineralSemi3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets right="8.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label fx:id="lblCM1SF" styleClass="label-der" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="6.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblCM2SF" styleClass="label-der" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="6.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="lblCM3SF" styleClass="label-der" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="6.0" right="8.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ImageView fx:id="imgM3Nucleo" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#handlerMineralNucleo3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <Label fx:id="lblM3nucleo" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane prefHeight="88.0" prefWidth="284.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.5" minWidth="10.0" prefWidth="68.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="216.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="49.5" minHeight="10.0" prefHeight="46.5" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="55.5" minHeight="10.0" prefHeight="41.5" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fx:id="imgDetalles" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <Label fx:id="nombreDetalles" prefHeight="38.0" prefWidth="198.0" text="nombre" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <StackPane prefHeight="121.0" prefWidth="284.0">
+                           <children>
+                              <AnchorPane fx:id="anchorInfo" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="121.0" prefWidth="284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.5" minWidth="10.0" prefWidth="16.5" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.5" minWidth="10.0" prefWidth="267.5" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="109.0" minHeight="10.0" prefHeight="84.5" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="109.0" minHeight="10.0" prefHeight="23.5" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="37.5" minHeight="8.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="lblInfo" alignment="TOP_LEFT" styleClass="label-der" text="Label" wrapText="true" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="3.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anchorMineral" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="121.0" prefWidth="284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.5" minWidth="10.0" prefWidth="17.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.5" minWidth="10.0" prefWidth="180.5" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.5" minWidth="10.0" prefWidth="87.5" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="33.5" minHeight="10.0" prefHeight="29.5" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="78.5" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="37.5" minHeight="8.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button fx:id="btnUbicacion" mnemonicParsing="false" onAction="#handlerBtnUbicacion" text="Ubicacion" GridPane.columnIndex="2">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
+                                          <Label fx:id="lblNombreOrigen" styleClass="label-der" text="Ubicacion" GridPane.columnIndex="1">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin></Label>
+                                          <ImageView fx:id="imgOrigen" fitHeight="72.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anchorNucleo" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane prefHeight="121.0" prefWidth="284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="24.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="245.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="20.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="35.0" minHeight="2.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handlerBtnAtributos" text="Prefijos" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

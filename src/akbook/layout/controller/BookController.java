@@ -6,10 +6,11 @@ package akbook.layout.controller;
 
 import akbook.entidades.base.CtrlPrincipal;
 import akbook.entidades.base.Item;
-import akbook.entidades.clases.FoodFinish;
-import akbook.entidades.complementarias.Stat;
-import akbook.entidades.enums.Calidad;
-import akbook.entidades.enums.Ruta;
+import akbook.entidades.base.ErrorAK;
+import akbook.entidades.food.FoodFinish;
+import akbook.entidades.complementarias.Value;
+import akbook.entidades.complementarias.Calidad;
+import akbook.entidades.complementarias.Ruta;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,6 +18,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -32,7 +34,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -51,10 +52,6 @@ public class BookController extends CtrlPrincipal implements Initializable {
 
     @FXML
     private TabPane tabPane;
-    @FXML
-    private Tab tabBuscar;
-    @FXML
-    private Tab tabCocina;
     @FXML
     private TabPane tabFood;
 
@@ -125,7 +122,13 @@ public class BookController extends CtrlPrincipal implements Initializable {
             nivel = linea.split(" ");
             lvl = Integer.parseInt(nivel[0]);
         }
-        paraSeleccionar= FoodFinish.traerFoodFinish(lvl);
+        try {
+            paraSeleccionar= FoodFinish.traerFoodFinish(lvl);
+        } catch (SQLException ex) {
+            ErrorAK.errorBaseDatos();
+        } catch (Exception ex) {
+            ErrorAK.errorGenerico();
+        }
         
         seleccionarIds();
         
@@ -224,7 +227,7 @@ public class BookController extends CtrlPrincipal implements Initializable {
     @FXML
     private void handlerImgFoodFinish(MouseEvent event) {
         cambiarStake(anchorInfoFood);
-        lvlInfoFood.setText("Nivel " + FoodElegida.getLvlRequerido() + " o superior.");
+        lvlInfoFood.setText("Nivel " + FoodElegida.getLvl() + " o superior.");
         setearPanelDerecho(FoodElegida);
         tabFood.getSelectionModel().select(0);
         alSeleccionarGreen(event);
@@ -238,9 +241,14 @@ public class BookController extends CtrlPrincipal implements Initializable {
                 + " " + FoodElegida.getBase().getNpcVendedor().getNombre()
                 + "\nUbicacion: " + FoodElegida.getBase().getNpcVendedor().getMapa();
         lblInfoNpc.setText("NPC:\n"+npcCompleto);
-        Stat statWhite = Stat.buscarStat("food_base.txt", FoodElegida.getBase().getId_base());
-        lblStatWhite.setText(statWhite.stats[0]
-                + "\n" + statWhite.stats[1]);
+        Value statWhite=null;
+        try {
+            statWhite = Value.buscarStat("food_base.txt", FoodElegida.getBase().getId_base());
+        } catch (IOException ex) {
+            ErrorAK.errorTxt("food_base.txt");
+        }
+        lblStatWhite.setText(statWhite.atributo[0]
+                + "\n" + statWhite.atributo[1]);
         goldMoneyDer.setText(String.valueOf(FoodElegida.getBase().getCostoCompra().getGold()));
         silverMoneyDer.setText(String.valueOf(FoodElegida.getBase().getCostoCompra().getSilver()));
     }
@@ -254,9 +262,14 @@ public class BookController extends CtrlPrincipal implements Initializable {
                     + " " + FoodElegida.getBase2().getNpcVendedor().getNombre()
                     + "\nUbicacion: " + FoodElegida.getBase2().getNpcVendedor().getMapa();
             lblInfoNpc.setText("NPC:\n"+npcCompleto);
-            Stat statWhite = Stat.buscarStat("food_base.txt", FoodElegida.getBase2().getId_base());
-            lblStatWhite.setText(statWhite.stats[0]
-                + "\n" + statWhite.stats[1]);
+            Value statWhite=null;
+            try {
+                statWhite = Value.buscarStat("food_base.txt", FoodElegida.getBase2().getId_base());
+            } catch (IOException ex) {
+                ErrorAK.errorTxt("food_base.txt");
+            }
+            lblStatWhite.setText(statWhite.atributo[0]
+                + "\n" + statWhite.atributo[1]);
             goldMoneyDer.setText(String.valueOf(FoodElegida.getBase2().getCostoCompra().getGold()));
             silverMoneyDer.setText(String.valueOf(FoodElegida.getBase2().getCostoCompra().getSilver()));
         } else {
@@ -295,10 +308,15 @@ public class BookController extends CtrlPrincipal implements Initializable {
         nombreItemDer.setText(FoodElegida.getNombreGreen());
         nombreItemDer.setId(Calidad.green.name());
 
-        Stat statGreen = Stat.buscarStat("food_finish_green.txt", FoodElegida.getId_base());
-        lblStatGreen.setText(statGreen.stats[0]
-                + "\n" + statGreen.stats[1]
-                + "\n" + statGreen.stats[2]
+        Value statGreen=null;
+        try {
+            statGreen = Value.buscarStat("food_finish_green.txt", FoodElegida.getId_base());
+        } catch (IOException ex) {
+            ErrorAK.errorTxt("food_finish_green.txt");
+        }
+        lblStatGreen.setText(statGreen.atributo[0]
+                + "\n" + statGreen.atributo[1]
+                + "\n" + statGreen.atributo[2]
                 + "\n \nTiempo: 1hs.");
     }
 
@@ -308,10 +326,15 @@ public class BookController extends CtrlPrincipal implements Initializable {
         nombreItemDer.setText(FoodElegida.getNombreOrange());
         nombreItemDer.setId(Calidad.orange.name());
 
-        Stat statOrange = Stat.buscarStat("food_finish_orange.txt", FoodElegida.getId_base());
-        lblStatOrange.setText(statOrange.stats[0]
-                + "\n" + statOrange.stats[1]
-                + "\n" + statOrange.stats[2]
+        Value statOrange=null;
+        try {
+            statOrange = Value.buscarStat("food_finish_orange.txt", FoodElegida.getId_base());
+        } catch (IOException ex) {
+            ErrorAK.errorTxt("food_finish_orange.txt");
+        }
+        lblStatOrange.setText(statOrange.atributo[0]
+                + "\n" + statOrange.atributo[1]
+                + "\n" + statOrange.atributo[2]
                 + "\n \nTiempo: 3hs.");
     }
 
@@ -321,10 +344,15 @@ public class BookController extends CtrlPrincipal implements Initializable {
         nombreItemDer.setText(FoodElegida.getNombrePurple());
         nombreItemDer.setId(Calidad.purple.name());
 
-        Stat statPurple = Stat.buscarStat("food_finish_purple.txt", FoodElegida.getId_base());
-        lblStatPurple.setText(statPurple.stats[0]
-                + "\n" + statPurple.stats[1]
-                + "\n" + statPurple.stats[2]
+        Value statPurple=null;
+        try {
+            statPurple = Value.buscarStat("food_finish_purple.txt", FoodElegida.getId_base());
+        } catch (IOException ex) {
+            ErrorAK.errorTxt("food_finish_purple.txt");
+        }
+        lblStatPurple.setText(statPurple.atributo[0]
+                + "\n" + statPurple.atributo[1]
+                + "\n" + statPurple.atributo[2]
                 + "\n \nTiempo: 3hs.");
     }
 
@@ -334,10 +362,15 @@ public class BookController extends CtrlPrincipal implements Initializable {
         nombreItemDer.setText(FoodElegida.getNombreGold());
         nombreItemDer.setId(Calidad.gold.name());
 
-        Stat statGold = Stat.buscarStat("food_finish_gold.txt", FoodElegida.getId_base());
-        lblStatGold.setText(statGold.stats[0]
-                + "\n" + statGold.stats[1]
-                + "\n" + statGold.stats[2]
+        Value statGold=null;
+        try {
+            statGold = Value.buscarStat("food_finish_gold.txt", FoodElegida.getId_base());
+        } catch (IOException ex) {
+            ErrorAK.errorTxt("food_finish_gold.txt");
+        }
+        lblStatGold.setText(statGold.atributo[0]
+                + "\n" + statGold.atributo[1]
+                + "\n" + statGold.atributo[2]
                 + "\n \nTiempo: 6hs.");
     }
 
@@ -353,7 +386,7 @@ public class BookController extends CtrlPrincipal implements Initializable {
 //        cargarItemSeleccionado(comida);
 
     //--------------------------------------  
-        tabPane.getSelectionModel().select(tabBuscar);
+//        tabPane.getSelectionModel().select(0);
         cargarTodo();
         btnMapIngr.setDisable(true);
         lblDetalles.setVisible(false);
@@ -368,67 +401,67 @@ public class BookController extends CtrlPrincipal implements Initializable {
 //-------------------------Otros -----------------------------------------------------------------------//    
     
     private void cargarItemSeleccionado(FoodFinish a){
-        FoodElegida = a;   
-        try {
-            if (a.getCantIngPrincipal() != 0) {
-                tabPane.getSelectionModel().select(tabCocina);
+    
+    FoodElegida = a; 
+    try{
+        if (a.getCantIngPrincipal() != 0) {
+            cambioDeTab(1);
             // Articulo fusion
-                Image imgIP = new Image(getClass().getResourceAsStream(a.getIngPrincipal().getArchivo()));
-                this.imgIngrPrincipal.setGraphic(new ImageView(imgIP));
-                this.nombreIngrPrincipal.setText(a.getIngPrincipal().getNombre());
-                this.cantIngrPrincipal.setText(String.valueOf(a.getCantIngPrincipal()));
-            // Resultado  
-                Image imgFF = new Image(getClass().getResourceAsStream(a.getArchivo()));
-                this.imgFoodFinish.setGraphic(new ImageView(imgFF));
-                this.nombreFoodFinish.setText(a.getNombre());
-            // Ingredientes 
-                Image imgFB = new Image(getClass().getResourceAsStream(a.getBase().getArchivo()));
-                this.imgFoodBase.setGraphic(new ImageView(imgFB));
-                this.imgFoodBase.setStyle(Calidad.white.getStyle());
-                this.nombreFoodBase.setText(a.getBase().getNombre());
-                if (a.getCantBase2() != 0) {
-                    Image imgI2 = new Image(getClass().getResourceAsStream(a.getBase2().getArchivo()));
-                    this.imgIngr2.setGraphic(new ImageView(imgI2));
-                    this.imgIngr2.setStyle(Calidad.white.getStyle());
-                    this.nombreIngr2.setText(a.getBase2().getNombre());
-                    this.cantIngr2.setText(String.valueOf(a.getCantBase2()));
-                } else {
-                    if (a.getCantIng2() != 0) {
-                        Image imgI2 = new Image(getClass().getResourceAsStream(a.getIng2().getArchivo()));
-                        this.imgIngr2.setGraphic(new ImageView(imgI2));
-                        this.imgIngr2.setStyle(Calidad.blue.getStyle());
-                        this.nombreIngr2.setText(a.getIng2().getNombre());
-                        this.cantIngr2.setText(String.valueOf(a.getCantIng2()));
-                    } else {
-                        this.imgIngr2.setGraphic(null);
-                        this.nombreIngr2.setText("");
-                        this.cantIngr2.setText("");
-                        this.imgIngr2.setStyle("");
-                    }
-                }
-            // Money
-                this.goldMoneyIzq.setText(String.valueOf(a.getCostoCocina().getGold()));
-                this.silverMoneyIzq.setText(String.valueOf(a.getCostoCocina().getSilver()));
+            Image imgIP = new Image(getClass().getResourceAsStream(a.getIngPrincipal().getArchivo()));
+            this.imgIngrPrincipal.setGraphic(new ImageView(imgIP));
+            this.nombreIngrPrincipal.setText(a.getIngPrincipal().getNombre());
+            this.cantIngrPrincipal.setText(String.valueOf(a.getCantIngPrincipal()));
+            // Resultado
+            Image imgFF = new Image(getClass().getResourceAsStream(a.getArchivo()));
+            this.imgFoodFinish.setGraphic(new ImageView(imgFF));
+            this.nombreFoodFinish.setText(a.getNombre());
+            // Ingredientes
+            Image imgFB = new Image(getClass().getResourceAsStream(a.getBase().getArchivo()));
+            this.imgFoodBase.setGraphic(new ImageView(imgFB));
+            this.imgFoodBase.setStyle(Calidad.white.getStyle());
+            this.nombreFoodBase.setText(a.getBase().getNombre());
+            if (a.getCantBase2() != 0) {
+                Image imgI2 = new Image(getClass().getResourceAsStream(a.getBase2().getArchivo()));
+                this.imgIngr2.setGraphic(new ImageView(imgI2));
+                this.imgIngr2.setStyle(Calidad.white.getStyle());
+                this.nombreIngr2.setText(a.getBase2().getNombre());
+                this.cantIngr2.setText(String.valueOf(a.getCantBase2()));
             } else {
-                this.imgIngrPrincipal.setGraphic(null);
-                this.nombreIngrPrincipal.setText("");
-                this.cantIngrPrincipal.setText("");
-                this.imgFoodFinish.setGraphic(null);
-                this.nombreFoodFinish.setText("");
-                this.imgFoodBase.setGraphic(null);
-                this.nombreFoodBase.setText("");
-                this.imgIngr2.setGraphic(null);
-                this.nombreIngr2.setText("");
-                this.cantIngr2.setText("");
-                this.goldMoneyIzq.setText("");
-                this.silverMoneyIzq.setText("");
+                if (a.getCantIng2() != 0) {
+                    Image imgI2 = new Image(getClass().getResourceAsStream(a.getIng2().getArchivo()));
+                    this.imgIngr2.setGraphic(new ImageView(imgI2));
+                    this.imgIngr2.setStyle(Calidad.blue.getStyle());
+                    this.nombreIngr2.setText(a.getIng2().getNombre());
+                    this.cantIngr2.setText(String.valueOf(a.getCantIng2()));
+                } else {
+                    this.imgIngr2.setGraphic(null);
+                    this.nombreIngr2.setText("");
+                    this.cantIngr2.setText("");
+                    this.imgIngr2.setStyle("");
+                }
             }
-        } catch (Exception ex) {
-            System.out.println(ex.getCause());
-            System.out.println(ex.getMessage());
+            // Money
+            this.goldMoneyIzq.setText(String.valueOf(a.getCostoCocina().getGold()));
+            this.silverMoneyIzq.setText(String.valueOf(a.getCostoCocina().getSilver()));
+        } else {
+            this.imgIngrPrincipal.setGraphic(null);
+            this.nombreIngrPrincipal.setText("");
+            this.cantIngrPrincipal.setText("");
+            this.imgFoodFinish.setGraphic(null);
+            this.nombreFoodFinish.setText("");
+            this.imgFoodBase.setGraphic(null);
+            this.nombreFoodBase.setText("");
+            this.imgIngr2.setGraphic(null);
+            this.nombreIngr2.setText("");
+            this.cantIngr2.setText("");
+            this.goldMoneyIzq.setText("");
+            this.silverMoneyIzq.setText("");
         }
         handlerImgIngrPrincipal(null);
+    } catch(NullPointerException ex){
+        ErrorAK.errorGenerico();
     }
+  }
 
     private void cargarTodo() {
         todoCheck.add(checkDANrecibido);
@@ -513,16 +546,19 @@ public class BookController extends CtrlPrincipal implements Initializable {
                     hash = false;
                 }
             }
-        } catch (IOException | NumberFormatException ex) {
-            ex.getMessage();
-            System.out.println("error al cargar archivo");
+        } catch (IOException ex) {
+            ErrorAK.errorTxt(atributo);
         } finally {
             try {
                 buffTxt.close();
             } catch (IOException ex) {
-                System.out.println("error en el finaly");
+                ErrorAK.errorTxt(atributo);
             }
         }
+    }
+    
+    public void cambioDeTab(int tab){
+        tabPane.getSelectionModel().select(tab);
     }
 
     @FXML
